@@ -14,5 +14,20 @@
     <input id="mes" type="text" name="mes" placeholder="mes" autofocus="autofocus" >
 
 <button onclick="convertir()" >convertir</button>
+    <script>
+var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+function convertir() {
+  var inputMes = document.getElementById('mes');
+  var numeroMes = parseInt(inputMes.value);
+  if(! isNaN(numeroMes) && numeroMes >= 1  && numeroMes <= 12 ) {
+      inputMes.value = meses[numeroMes - 1];
+   } else if (numeroMes >=13){
+      alert ("Ingrese un numero valido");
+    }
+      
+  }
+
+    </script>
 </body>
 </html>
